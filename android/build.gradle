@@ -3,6 +3,7 @@ group 'com.sameer.flutterstatusbarcolor.flutterstatusbarcolor'
 version '1.0-SNAPSHOT'
 
 buildscript {
+    ext.kotlin_version = '1.8.10'
     repositories {
         mavenCentral()
         google()
@@ -10,6 +11,7 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:8.4.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
@@ -43,4 +45,8 @@ android {
     lintOptions {
         disable 'InvalidPackage'
     }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 }
